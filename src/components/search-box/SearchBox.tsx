@@ -1,7 +1,18 @@
 import React from "react";
+import { ChangeEvent } from "react";
 import "./search-box.styles.css";
 
-function SearchBox({ className, placeholder, onChangeHandler }) {
+type SearchBoxProps = {
+  className: string;
+  placeholder?: string;
+  onChangeHandler: (event: ChangeEvent<HTMLInputElement>) => void;
+};
+
+const SearchBox = ({
+  className,
+  placeholder,
+  onChangeHandler,
+}: SearchBoxProps) => {
   return (
     <div>
       <input
@@ -12,7 +23,7 @@ function SearchBox({ className, placeholder, onChangeHandler }) {
       />
     </div>
   );
-}
+};
 
 export default SearchBox;
 

@@ -1,7 +1,12 @@
 import React from "react";
+import { Monster } from "../../App";
 import "./card.styles.css";
 
-function Card({ monster }) {
+type CardProps = {
+  monster: Monster,
+};
+
+function Card({ monster }: CardProps) {
   const { name, email, id } = monster;
 
   return (
